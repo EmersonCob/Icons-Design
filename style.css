@@ -7,7 +7,7 @@ body{
     background: #e3edf7;
 }
 
-H1{
+h1{
     font-family: sans-serif;
     font-weight: normal;
     font-size: 25px;
@@ -19,10 +19,50 @@ H1{
 
 body.active 
 {
+
     min-height: 100vh;
-    background: #2b2b2b;
+    background: rgb(29,34,44);
     transition: 0.5s;
 }
+
+h1.active{
+    color: #e3edf7;
+}
+
+#media.active a{
+    display: flex;
+    background: rgb(25, 30, 40);
+    height: 55px;
+    width: 55px;
+    margin: 0 10px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,1),
+                -6px -6px 10px -1px rgba(35, 59, 66, 0.233);
+    border: 1px solid rgba(0,0,0,0);
+    transition: transform 0.5s;
+}
+
+#media.active a i{
+    font-size: 25px;
+    color: #e3edf7;
+    transition: transform 0.5s; 
+    
+}
+
+#media.active a:hover{
+    border: 1px solid rgba(0,0,0,0.01);
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.9),
+                inset -4px -4px 6px -1px rgba(74, 100, 126, 0.144),
+                        -0.5px -0.5px 0px rgba(99, 96, 96, 0.425),
+                        0.5px 0.5px 0px rgba(0,0,0,0.15),
+                        0px 12px 10px 10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.01);
+    transform: translateY(2px);
+}
+
 
 .button{
     float:right;
@@ -37,14 +77,15 @@ body.active
     width: 50px;
     height: 20px;
     border-radius: 12px;
-    background: #222;
+    background: #c8cccf;
     transition: 0.5s;
     cursor: pointer;
 }
 
 #toggle.active
 {
-    background: #fff;
+    background: rgb(73, 73, 73);
+    box-shadow: -3px -3px -2px -2px rgba(207, 206, 206, 0.2);
 }
 
 #toggle .indicator 
@@ -54,7 +95,8 @@ body.active
     left: 0;
     width: 20px;
     height: 20px;
-    background: linear-gradient(to bottom, #444, #222);
+    background: linear-gradient(to bottom, #e2dfdf, #dfdddd);
+    box-shadow: -2px -2px -2px -1px rgba(0, 0, 0, 0.2);
     border-radius: 50%;
     transform: scale(0.9);
     transition: 0.5s;
@@ -63,7 +105,7 @@ body.active
 #toggle.active .indicator
 {
     left: 30px;
-    background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+    background: linear-gradient(to bottom, #444, #222 );
 }
 
 .social-media{
@@ -129,5 +171,33 @@ a:hover .fa-instagram{
 }
 
 a:hover .fa-youtube{
+    color: #f00;
+}
+
+a:hover i{
+    transform: scale(0.90);
+}
+
+#media.active a:hover .fa-facebook{
+    color: #2a59c0;
+}
+
+#media.active a:hover .fa-twitter{
+    color: #00acee;
+}
+
+#media.active a:hover .fa-whatsapp{
+    color: #4fce5d;
+}
+
+#media.active a:hover .fa-telegram{
+    color: #61b7f0;
+}
+
+#media.active a:hover .fa-instagram{
+    color: #f14843;
+}
+
+#media.active a:hover .fa-youtube{
     color: #f00;
 }
